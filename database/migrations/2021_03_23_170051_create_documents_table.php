@@ -14,7 +14,8 @@ class CreateDocumentsTable extends Migration
     public function up()
     {
         Schema::create('documents', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->id();
+            $table->uuid('uuid');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('type_id');
             $table->unsignedBigInteger('purpose_id');

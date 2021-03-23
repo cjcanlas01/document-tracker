@@ -14,7 +14,8 @@ class CreateTrackedLogsTable extends Migration
     public function up()
     {
         Schema::create('tracked_logs', function (Blueprint $table) {
-            $table->uuid('id');
+            $table->id();
+            $table->uuid('uuid');
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('document_id');
             /**
